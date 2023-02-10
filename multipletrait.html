@@ -13,7 +13,7 @@
 
 <meta name="date" content="2023-02-10" />
 
-<title>Penguins</title>
+<title>multipletrait</title>
 
 <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -262,48 +262,13 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Penguins</h1>
+<h1 class="title toc-ignore">multipletrait</h1>
 <h4 class="author">Jessie Hughes</h4>
 <h4 class="date">2023-02-10</h4>
 
 </div>
 
 
-<div id="data" class="section level2">
-<h2>Data</h2>
-<p><em>The goal of palmerpenguins is to provide a great dataset for data
-exploration &amp; visualization:</em></p>
-<p><img
-src="https://global.discourse-cdn.com/standard14/uploads/fudiabetes/original/2X/3/3d1747df3b46352e41fc585ab71698b51c772d2c.jpg" /></p>
-<pre class="r"><code>view(penguins)</code></pre>
-<pre class="r"><code>dim(penguins)</code></pre>
-<pre><code>## [1] 344   8</code></pre>
-<pre class="r"><code>?penguins</code></pre>
-<pre class="r"><code>colnames(penguins)</code></pre>
-<pre><code>## [1] &quot;species&quot;           &quot;island&quot;            &quot;bill_length_mm&quot;    &quot;bill_depth_mm&quot;    
-## [5] &quot;flipper_length_mm&quot; &quot;body_mass_g&quot;       &quot;sex&quot;               &quot;year&quot;</code></pre>
-</div>
-<div id="single-trait-distribution" class="section level2">
-<h2>Single trait distribution</h2>
-<p>We’re going to make some code chunks that explore single traits of
-penguins in a plot using ggplot</p>
-<pre class="r"><code>ggplot(data = penguins, aes(x = species, y = body_mass_g)) +
-  geom_bar(stat = &quot;identity&quot;) +
-  facet_wrap(~species)</code></pre>
-<pre><code>## Warning: Removed 2 rows containing missing values (`position_stack()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<pre class="r"><code>ggplot(data = penguins) +
-  geom_point(mapping = aes(x=body_mass_g, y = flipper_length_mm, color = species)) </code></pre>
-<pre><code>## Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<pre class="r"><code>ggplot(data = penguins) +
-  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species)) +
-  geom_smooth(mapping = aes(x = body_mass_g, y = flipper_length_mm))</code></pre>
-<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</code></pre>
-<pre><code>## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
-<pre><code>## Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-</div>
 <div id="relationship-between-multiple-traits" class="section level2">
 <h2>Relationship between multiple traits</h2>
 <pre class="r"><code>penguins %&gt;%
@@ -313,12 +278,9 @@ penguins in a plot using ggplot</p>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-8-1.png" width="672" />
-penguins_no_na &lt;- penguins %&gt;% filter(!is.na(sex)) : Shows how you
-can exclude values which are NA (not applicable)</p>
-</div>
-<div id="sexual-dimorphism" class="section level2">
-<h2>Sexual dimorphism</h2>
+<p><img src="multipletrait_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>penguins_no_na &lt;- penguins %&gt;% filter(!is.na(sex)) : Shows how
+you can exclude values which are NA (not applicable)</p>
 </div>
 
 

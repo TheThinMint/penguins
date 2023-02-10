@@ -291,18 +291,18 @@ penguins in a plot using ggplot</p>
   geom_bar(stat = &quot;identity&quot;) +
   facet_wrap(~species)</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (`position_stack()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(data = penguins) +
   geom_point(mapping = aes(x=body_mass_g, y = flipper_length_mm, color = species)) </code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(data = penguins) +
   geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species)) +
   geom_smooth(mapping = aes(x = body_mass_g, y = flipper_length_mm))</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 </div>
 <div id="relationship-between-multiple-traits" class="section level2">
 <h2>Relationship between multiple traits</h2>
@@ -313,7 +313,7 @@ penguins in a plot using ggplot</p>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
-<p><img src="Penguins_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<p><img src="index_files/figure-html/unnamed-chunk-40-1.png" width="672" />
 penguins_no_na &lt;- penguins %&gt;% filter(!is.na(sex)) : Shows how you
 can exclude values which are NA (not applicable)</p>
 </div>

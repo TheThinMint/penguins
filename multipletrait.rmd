@@ -1,0 +1,21 @@
+---
+title: "multipletrait"
+author: "Jessie Hughes"
+date: "2023-02-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Relationship between multiple traits
+
+```{R}
+penguins %>%
+  ggplot(mapping = aes(x = body_mass_g, y=flipper_length_mm, color=species)) +
+  geom_point() +
+  geom_smooth(method="lm")
+```
+
+penguins_no_na <- penguins %>% filter(!is.na(sex)) : Shows how you can exclude values which are NA (not applicable)
