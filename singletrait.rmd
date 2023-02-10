@@ -1,0 +1,42 @@
+---
+title: "singletrait"
+author: "Jessie Hughes"
+date: "2023-02-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Single trait distribution
+We're going to make some code chunks that explore single traits of penguins in a plot using ggplot
+
+```{R}
+ggplot(data = penguins, aes(x = species, y = body_mass_g)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~species)
+```
+
+
+```{R}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x=body_mass_g, y = flipper_length_mm, color = species)) 
+  
+```
+
+```{R}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x = body_mass_g, y = flipper_length_mm, color = species)) +
+  geom_smooth(mapping = aes(x = body_mass_g, y = flipper_length_mm))
+  
+```
+
+
+
+
+
+
+
+
+

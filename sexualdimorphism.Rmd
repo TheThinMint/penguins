@@ -1,0 +1,14 @@
+---
+title: "sexualdimorphism"
+author: "Jessie Hughes"
+date: "2023-02-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sexual Dimorphism
+
+I didn't actually get to this part because I hyperfocused on the multiple traits portion of this lab. Oh well.
